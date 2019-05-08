@@ -138,7 +138,7 @@ width: 20px;
 
     @media only screen and (max-width:620px) {
     /* For mobile phones: */
-    .gamecontainer, .players, .restart  {
+    .gamecontainer, .players, .restart ,.resetScore {
       width:100%;
       text-align: center;
     }
