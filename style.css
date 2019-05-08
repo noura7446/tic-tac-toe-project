@@ -14,8 +14,8 @@ border-color: pink;
 
   }
 
-  table {
-      width: 70%;
+  .game-table {
+      width: 50%;
       /* padding-top: 20%; */
       margin: 0 auto;
 
@@ -45,7 +45,7 @@ border-color: pink;
 
 }
 
-table {
+.game-table {
 
   margin: 0 auto;
   border-collapse: collapse;
@@ -53,7 +53,7 @@ table {
   border-width: thick;
 
 }
-table td {
+.game-table td {
   padding: 1rem;
   border: 5px solid pink;
   height: 50px;
@@ -116,6 +116,16 @@ font-size: 20px;
 font-weight: bolder;
 
 }
+.resetScore{  margin: 0 auto;
+  background-color: pink;
+  color: black;
+  border: 2px solid pink;
+  width: 15%;
+  padding: 1.5%;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 20px;}
+  .resetScore:hover {background-color: white;}
 
 .twitter-icon{
 width: 20px;

@@ -1,8 +1,38 @@
 var player = 'X';
 var counter=0;
+var won = false;
+var scores = loadScores();
+console.log(scores);
+$('.x-score').text(scores.X);
+$('.o-score').text(scores.O);
+ // $("scores").updateScores(scores.O,score.X);
+function updateScores(o_score, x_score){  // updateScores({O: 1, X: 0})
+  let OScore = parseInt(localStorage.getItem('O', 0));
+  localStorage.setItem('O', OScore + o_score);
+  let XScore = parseInt(localStorage.getItem('X', 0));
+  localStorage.setItem('X', XScore + x_score);
+}
+
+
+function loadScores(){
+  let OScore = parseInt(localStorage.getItem('O', 0));
+  let XScore = parseInt(localStorage.getItem('X', 0));
+  return {O: OScore, X: XScore};
+}
+
+function resetScores(){
+    localStorage.setItem('O', 0);
+    localStorage.setItem('X', 0);
+    location.reload();
+}
+
+$(".resetScore").on("click",resetScores);
+
+// $('.x-score').text(val(XScore));
 function playTurn (event) {
-     // $(event.target).html('<img width="9%" hight="9%" id="theImg" src="X.png" />')
-      $(event.target).text(player);
+      $(event.target).html('<img width="25" hight="25" id="theImg" src="' + player + '.png" />');
+      $(event.target).attr('player', player);
+      // $(event.target).text(player);
      counter+=1;
      console.log(counter);
      win(player);
@@ -38,8 +68,15 @@ function sound(event){
   $('td').on('click',sound);
 
 function checkWiner(player, number1, number2, number3) {
-    if ($("."+number1).text() == player && $("."+number2).text() == player && $("."+number3).text() == player) {
+    if ($("."+number1).attr('player') == player && $("."+number2).attr('player') == player && $("."+number3).attr('player') == player) {
+      won = true;
+      if(player == 'O')
+        updateScores(1, 0);
+      else
+        updateScores(0, 1);
+      console.log(loadScores());
 swal("Congratulations You win !", player , "success");
+$("td").off("click");
 // $('td').html("");
 
   // swal("Congratulations " + player + "  You won.");
@@ -47,7 +84,9 @@ swal("Congratulations You win !", player , "success");
    // empty();
 }
 else if (counter>=9){
-swal(" It's a tie :) ");
+  if (won == false){
+  swal(" It's a tie :) ");
+}
 // empty();
 
 }
