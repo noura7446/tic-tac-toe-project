@@ -1,0 +1,162 @@
+body{
+  /* display: flex; */
+  /* background-color: #D6EAF8 */
+border-color: pink;
+
+
+  }
+
+  .gamecontainer{
+    /* display: flex; */
+    margin:10%;
+    /* margin: inherit; */
+     text-align: center;
+
+  }
+
+  table {
+      width: 70%;
+      /* padding-top: 20%; */
+      margin: 0 auto;
+
+    }
+     h1{
+      font-size: 80px;
+      text-align: center;
+      font-family:monospace ;
+      color: black;
+      margin:0%;
+      margin-top: 10%;
+      font-weight: bolder;
+
+    }
+    h2{
+       font-size: 30px;
+    }
+.img{
+
+ width:20%;
+ float:left;
+}
+.img2{
+
+ width:20%;
+ float:right;
+
+}
+
+table {
+
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-style: hidden;
+  border-width: thick;
+
+}
+table td {
+  padding: 1rem;
+  border: 5px solid pink;
+  height: 50px;
+  width: 50px;
+}
+
+  .players {
+  padding:3%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  }
+  .x {
+    background-color: pink;
+    color: black;
+    border: 2px solid pink;
+    width: 15%;
+    padding: 1%;
+    font-weight: bold;
+    font-size: 20px;
+
+   }
+
+  .x:hover {background-color: white;}
+
+  .o {
+    background-color: pink;
+    color: black;
+    border: 2px solid pink;
+    width: 15%;
+    padding: 1%;
+    font-weight: bold;
+    font-size: 20px;
+
+
+   }
+
+  .o:hover {background-color: white;}
+
+
+  .restart{
+    margin: 0 auto;
+    background-color: pink;
+    color: black;
+    border: 2px solid pink;
+    width: 15%;
+    padding: 1.5%;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+
+  }
+  .restart:hover {background-color: white;}
+  footer{
+text-align:center;
+font-size: 20px;
+ 	color: #8686CC;
+  font-family: monospace;
+   box-shadow: 0 1px 1px 0 rgba(145, 96, 135, 0.12);
+font-weight: bolder;
+
+}
+
+.twitter-icon{
+width: 20px;
+
+}
+.githup-icon{
+width: 20px;
+
+}
+
+    @media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .gamecontainer, .players, .restart  {
+      width:100%;
+      text-align: center;
+    }
+.h2{
+  text-align: center;
+  width:100%;
+
+}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+		text-align: center;
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-name{
+		margin-top: 10px;
+		font-size: 12px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+  }
